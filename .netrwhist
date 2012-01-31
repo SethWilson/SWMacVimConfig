@@ -1,4 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/jelle/Sites/10to1/10to1.github.com/_posts'
-let g:netrw_dirhist_2='/Users/seth/Desktop/mabelsSR_site'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/seth/Code/Website'
+let g:netrw_dirhist_2='/Users/seth/Code/Website-git2'
+let g:netrw_dirhist_3='/Users/seth/Dropbox/NewLabelBuilderProtoType'
+let g:netrw_dirhist_4='/Users/seth/Code/Website'
+let g:netrw_dirhist_5='/Users/seth/Code/wukong/examples'
+let g:netrw_dirhist_6='/Users/seth/Code/SEO/termtracker'
+let g:netrw_dirhist_7='/Users/seth/Code/Website'

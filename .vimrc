@@ -10,6 +10,12 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#7A7A90
 highlight SpecialKey guifg=#7A7A90
 
+set runtimepath+=$HOME/.vim/vim-haml
+set runtimepath+=$HOME/.vim/vim-fugitive
+
+filetype plugin indent on
+syntax on
+
 " Use a 2 space soft tab
 set softtabstop=2
 set shiftwidth=2
@@ -93,4 +99,15 @@ nmap <C-L> <C-W><C-L>
 " NERDTree command
 "Nerd Tree commands and options
 map <Leader>; :NERDTreeToggle<cr>
+
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
+
+"Jump to next space character
+"nnoremap f f<space>
+"vnoremap f f<space>
+
+ " HTML Tidy, http://tidy.sourceforge.net/
+ " select xml text to format and hit ,x
+ vmap ,x :!tidy -q -i -xml<CR>
 
