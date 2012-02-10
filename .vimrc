@@ -23,10 +23,10 @@ set tabstop=2
 set autoindent
 set noexpandtab
 
-:silent exe "g:flog_enable"
-:silent exe "g:flog_medium_limit=15"
-:silent exe "g:flog_high_limit=30"
-
+" My Status line
+set laststatus=2
+set statusline=%=%{fugitive#statusline()}\ %t\ %y\ format:\ %{&ff};\ [%c,%l]\ %P
+ 
 " Highlight search results
 set hlsearch
 
