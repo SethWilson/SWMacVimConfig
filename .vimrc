@@ -6,16 +6,18 @@ set number
 set hidden
 set list
 set listchars=tab:▸\ ,eol:¬
+set t_Co=256
+colorscheme idle2
 "Invisible character colors
 highlight NonText guifg=#7A7A90
 highlight SpecialKey guifg=#7A7A90
 
 set runtimepath+=$HOME/.vim/vim-haml
 set runtimepath+=$HOME/.vim/vim-fugitive
+set runtimepath+=$HOME/.vim/CSApprox
 
 filetype plugin indent on
 syntax on
-
 " Use a 2 space soft tab
 set softtabstop=2
 set shiftwidth=2
@@ -45,6 +47,7 @@ let mapleader = ";"
 command! B  :LustyBufferExplorer
 command! F  :LustyFilesystemExplorer
 command! FH :LustyFilesystemExplorerFromHere
+
 command! BG :LustyBufferGrep
 
 " Run ruby like Textmate
@@ -111,3 +114,10 @@ nnoremap <CR> :noh<CR><CR>
  " select xml text to format and hit ,x
  vmap ,x :!tidy -q -i -xml<CR>
 
+" Auto close: parentheses, brackets, and braces.
+imap { {}<left>
+imap ( ()<left>
+imap [ []<left>
+imap < <><left>
+
+inoremap jj <Esc> " Esc is so far away without this mapping...

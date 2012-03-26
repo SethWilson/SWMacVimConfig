@@ -1,11 +1,10 @@
 if has("gui_running")
  set guioptions=egmrt
-
+colorscheme idle-fingers
 " remove the scrollbar
 set guioptions-=r
 set guioptions-=R
 
- colorscheme idle-fingers 
   set guifont=Inconsolata:h16
 
  " decent full screen support
