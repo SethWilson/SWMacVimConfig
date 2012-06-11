@@ -15,6 +15,7 @@ highlight SpecialKey guifg=#7A7A90
 set runtimepath+=$HOME/.vim/vim-haml
 set runtimepath+=$HOME/.vim/vim-fugitive
 set runtimepath+=$HOME/.vim/CSApprox
+set runtimepath+=$HOME/.vim/vim-powerline
 
 filetype plugin indent on
 syntax on
@@ -115,9 +116,9 @@ nnoremap <CR> :noh<CR><CR>
  vmap ,x :!tidy -q -i -xml<CR>
 
 " Auto close: parentheses, brackets, and braces.
-imap { {}<left>
-imap ( ()<left>
-imap [ []<left>
-imap < <><left>
+"imap { {}<left>
+"imap ( ()<left>
+"imap [ []<left>
+"imap < <><left>
 
 inoremap jj <Esc> " Esc is so far away without this mapping...
