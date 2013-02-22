@@ -4,7 +4,7 @@
 " Editor settings
 set number
 set hidden
-set list
+set nolist
 set listchars=tab:▸\ ,eol:¬
 set t_Co=256
 colorscheme idle2
@@ -17,7 +17,22 @@ set runtimepath+=$HOME/.vim/vim-fugitive
 set runtimepath+=$HOME/.vim/CSApprox
 set runtimepath+=$HOME/.vim/vim-powerline
 
-filetype plugin indent on
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+  " let Vundle manage Vundle
+ " required! 
+ Bundle 'gmarik/vundle'
+ Bundle 'Valloric/YouCompleteMe'
+ Bundle 'Raimondi/delimitMate'
+ Bundle 'vim-scripts/Limp'
+
+ filetype plugin indent on     " required!
+
+
+
 syntax on
 " Use a 2 space soft tab
 set softtabstop=2
@@ -122,3 +137,5 @@ nnoremap <CR> :noh<CR><CR>
 "imap < <><left>
 
 inoremap jj <Esc> " Esc is so far away without this mapping...
+let g:Powerline_symbols = 'fancy'
+
