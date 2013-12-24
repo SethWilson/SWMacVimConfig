@@ -1,5 +1,5 @@
 " Not VI compatible
-"set nocompatible
+set nocompatible
 
 " Editor settings
 set number
@@ -12,22 +12,19 @@ colorscheme idle2
 highlight NonText guifg=#7A7A90
 highlight SpecialKey guifg=#7A7A90
 
-set runtimepath+=$HOME/.vim/vim-haml
-set runtimepath+=$HOME/.vim/vim-fugitive
 set runtimepath+=$HOME/.vim/CSApprox
-set runtimepath+=$HOME/.vim/vim-powerline
-
+execute pathogen#infect()
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
-
-  " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
- Bundle 'Valloric/YouCompleteMe'
- Bundle 'Raimondi/delimitMate'
- Bundle 'vim-scripts/Limp'
+"set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
+"
+"  " let Vundle manage Vundle
+" " required! 
+" Bundle 'gmarik/vundle'
+" Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Raimondi/delimitMate'
+" Bundle 'vim-scripts/Limp'
 
  filetype plugin indent on     " required!
 
@@ -55,7 +52,7 @@ if has("autocmd")
   autocmd bufWritePost .vimrc source $MYVIMRC
 endif
 
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugins/yaml.vim
+"au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/plugins/yaml.vim
 
 let mapleader = ";"
 
@@ -83,8 +80,6 @@ if has("autocmd") && has("gui_macvim")
 
   endif
 
-" Fuzzy finder shortcuts
-nmap <leader>ff :FuzzyFinderTextMate<CR>
 
 " Strip trailing white spaces
 function! <SID>StripTrailingWhitespaces()
