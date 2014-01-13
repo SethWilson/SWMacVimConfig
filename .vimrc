@@ -134,3 +134,4 @@ nnoremap <CR> :noh<CR><CR>
 inoremap jj <Esc> " Esc is so far away without this mapping...
 let g:Powerline_symbols = 'fancy'
 
+let g:vim_markdown_folding_disabled=1
